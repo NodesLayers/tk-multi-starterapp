@@ -38,4 +38,4 @@ class StgkStarterApp(Application):
         menu_callback = lambda: app_payload.dialog.show_dialog(self)
 
         # now register the command with the engine
-        self.engine.register_command("Show Starter Template App...", menu_callback)
+        self.engine.register_command("Show {} App...".format(self.get_setting("display_name")), menu_callback)
